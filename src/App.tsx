@@ -4,15 +4,17 @@ import './App.css';
 import MainPage from './pages/MainPage';
 import AirportDetailPage from './pages/AirportDetailPage';
 import Auth from './pages/Auth';
+import Navigation from './components/Navigation';
 function App() {
   return (
-    <div >
+    <>
+      <Navigation/>
      <Routes>
       <Route path='/' element={<MainPage/>}></Route>
       <Route path='/auth' element={<Auth/>}></Route>
       <Route path='/airport/:id' element={<AirportDetailPage/>}></Route>
      </Routes>
-    </div>
+    </>
   );
 }
 
